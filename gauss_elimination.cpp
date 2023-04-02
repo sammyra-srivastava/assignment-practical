@@ -12,15 +12,14 @@ int main()
 	 float a[SIZE][SIZE], x[SIZE], ratio;
 	 int i,j,k,n;
 
-     /* Setting precision and writing floating point values in fixed-point notation. */
+     
      cout<< setprecision(3)<< fixed;
 
-	 /* Inputs */
-	 /* 1. Reading number of unknowns */
+	 
 	 cout<<"Enter number of unknowns: ";
 	 cin>>n;
 
-	 /* 2. Reading Augmented Matrix */
+	 
 	 cout<<"Enter Coefficients of Augmented Matrix: "<< endl;
 	 for(i=1;i<=n;i++)
 	 {
@@ -30,7 +29,7 @@ int main()
 			   cin>>a[i][j];
 		  }
 	 }
-	/* Applying Gauss Elimination */
+	
 	 for(i=1;i<=n-1;i++)
 	 {
 		  if(a[i][i] == 0.0)
@@ -48,7 +47,7 @@ int main()
 			   }
 		  }
 	 }
-	 /* Obtaining Solution by Back Substitution Method */
+	
 	 x[n] = a[n][n+1]/a[n][n];
 
 	 for(i=n-1;i>=1;i--)
@@ -61,7 +60,7 @@ int main()
 		  x[i] = x[i]/a[i][i];
 	 }
 
-	 /* Displaying Solution */
+	 
 	 cout<< endl<<"Solution: "<< endl;
 	 for(i=1;i<=n;i++)
 	 {
